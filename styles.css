@@ -27,11 +27,12 @@ h1, h2, h3 {
 /* Navigation Bar */
 
 #nav-bar-container {
+    position: sticky;
+    top: 0;
     width: 100%;
     background-color: #fff;
     height: 60px;
-    position: sticky;
-    top: 0;
+    border: 1px solid #ddd;
 }
 
 .nav-bar {
@@ -42,13 +43,21 @@ h1, h2, h3 {
     height: 100%;
 }
 
+.nav-links {
+    display: none;
+}
+
+img.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+}
+
+
+
 .logo {
     width: 150px;
     height: auto;
-}
-
-.nav-links {
-    display: none;
 }
 
 /* Hero Section */
@@ -105,4 +114,24 @@ h1, h2, h3 {
     margin: 15px auto;
     line-height: 1.6;
     max-width: 600px;
+}
+
+/*media queries for responsiveness */
+@media (min-width: 768px) {
+    img.hamburger-menu {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+    }
+
+    .nav-links li a{
+    text-decoration: none;
+    color: #0070c0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
 }
