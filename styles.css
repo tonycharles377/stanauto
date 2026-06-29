@@ -34,6 +34,12 @@ h1, h2, h3 {
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
+    width: 50%;
+}
+
+.call-to-action:hover {
+    background-color: #8f1c00;
+    transition: background-color 0.3s ease;
 }
 
 /* Navigation Bar */
@@ -45,6 +51,7 @@ h1, h2, h3 {
     background-color: #fff;
     height: 60px;
     border: 1px solid #ddd;
+    z-index: 1000;
 }
 
 .nav-bar {
@@ -74,9 +81,12 @@ img.hamburger-menu {
 
 /* Hero Section */
 #hero-section {
+    display: flex;
+    flex-direction: column;
     min-height: calc(100vh - 60px);
     padding: 10px 20px;
     background-color: #f4f4f4;
+    justify-content: center;
 }
 
 .hero-image-container {
@@ -107,18 +117,21 @@ img.hamburger-menu {
 
 /* About Us Section */
 #about-us {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     background-color: #cbe0fe;
-    min-height: 100vh;
+    align-items: center;
 }
 
 #about-us h2 {
+    text-align: center;
     font-weight: 900;
+    margin: 0;
 }
 
 #about-us p {
-    margin: 15px auto;
+    margin: 10px auto;
     line-height: 1.6;
     max-width: 600px;
 }
@@ -135,6 +148,12 @@ img.hamburger-menu {
     margin: 20px auto;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
@@ -175,6 +194,11 @@ img.hamburger-menu {
     border-radius: 5px;
 }
 
+.card button:hover {
+    background-color: #005a9e;
+    transition: background-color .3s ease;
+}
+
 /* Why Choose Us Section */
 #why-choose-us {
     padding: 20px;
@@ -187,7 +211,6 @@ img.hamburger-menu {
 }
 
 .testimonial-container {
-    max-width: 100%;
     max-width: 400px;
     height: auto;
     margin: 20px auto;
@@ -269,12 +292,19 @@ img.hamburger-menu {
     align-self: center;
 }
 
+#contact form button:hover {
+    background-color: #005a9e;
+    transition: background-color .3s ease;
+}
+
 /* Footer Section */
 footer {
-    position: relative;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 20px 40px;
     background-color: #cbe0fe;
-    height: 35vh;
 }
 
 footer img {
@@ -285,11 +315,11 @@ footer p {
     text-align: center;
 }
 
-footer .bottom {
+/*footer .bottom {
     position: absolute;
     bottom: 0;
     text-align: center;
-}
+}*/
 
 .socials-icon-container {
     text-align: center;
