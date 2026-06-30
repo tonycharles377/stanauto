@@ -362,9 +362,67 @@ footer p {
     }
 
     .nav-links li a:hover {
-        color: #0070c0;
         text-decoration: underline;
         text-underline-offset: 8px;
-        transition: all 0.3s ease;
+    }
+
+    /*hero section*/
+    #hero-section {
+        position: relative;/*Creates a positioning context*/
+        display: flex;
+        align-items: center;
+        min-height: calc(100vh - 60px);
+        width: auto;
+        background-image: url('./assets/hero-section-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    /*Creating a clean background overlay*/
+    #hero-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;/*streatches the absolute positioned element to fit parent - short hand for top,right, bottom, and left=0*/
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+    /*select all children of hero-section*/
+    #hero-section > * {
+        position: relative;/*position all elements to make z-index work*/
+        z-index: 2;
+    }
+
+    .hero-image-container {
+        display: none;
+    }
+
+    .hero-content-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .hero-content-container h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: 1.1;
+    }
+
+    .hero-content-container p {
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 0;
+    }
+
+    .call-to-action{
+        font-size: 1.4rem;
+        width: 210px;
+        padding: 20px 0;
+        border-radius: 30px;
+        margin: 10px 0;
     }
 }
